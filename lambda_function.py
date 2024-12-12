@@ -101,7 +101,6 @@ def textract_extract_queries(bucket, key):
 #------Helper functions------
 
 def date_2_time(date, fmt='%d/%m/%Y'):
-    
     return int(datetime.timestamp(datetime.strptime(date.group(), fmt)))
 
 # for handling the uncertain results  validity dates
@@ -215,12 +214,11 @@ def scan_worker_card(event):
         raise
     
     return response
-    
+
+
 # --------------- Main handler ------------------
 
-
 def lambda_handler(event, context):
-    
     try:
         response = scan_worker_card(event)
         return response
