@@ -9,4 +9,4 @@ Amazon Textract for OCR on ID Cards
   6) Link to the database for automatic record updating
 - Codes that may involve customization:
 - - get_qa_map(): QueriesConfig -> a list of queries/prompts to govern what information to search from an image; currently extracted = worker name, card reference number, validity period, certificate type
-- scan_worker_card(): update_item -> the list of updates should be modified according to those queried above
+- - scan_worker_card(): update_item -> the list of updates should be modified according to those queried above
