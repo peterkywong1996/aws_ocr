@@ -1,0 +1,36 @@
+{
+  "accountType": {
+    "S": "mainContractor"
+  },
+  "id": {
+    "S": "0zl5TRDDdPfs3e0OJcEz6AVdKNt2"
+  },
+  "displayName": {
+    "S": "ABC Main Con Admin"
+  },
+  "email": {
+    "S": "autofilldev+maincon1@gmail.com"
+  },
+  "organization": {
+    "M": {
+      "id": {
+        "S": "edaca7c5-3a74-41b7-9c06-1195e8bba103"
+      },
+      "orgType": {
+        "S": "mainContractor"
+      }
+    }
+  },
+  "phone": {
+    "S": ""
+  },
+  "profileImage": {
+    "S": "https://xxi0juyzo0.execute-api.ap-southeast-1.amazonaws.com/s3?bucketName=autofill-profiles&fileName=mainContractor-0zl5TRDDdPfs3e0OJcEz6AVdKNt2-testlogo.png"
+  },
+  "role": {
+    "S": "admin"
+  },
+  "username": {
+    "S": "autofilldev+maincon1"
+  }
+}

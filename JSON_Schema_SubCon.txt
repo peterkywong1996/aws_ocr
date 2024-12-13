@@ -1,0 +1,36 @@
+{
+  "accountType": {
+    "S": "subContractor"
+  },
+  "id": {
+    "S": "0DjGwhXb0TVJk8KrHyAqyyOKmZa2"
+  },
+  "displayName": {
+    "S": "DEF Sub Con"
+  },
+  "email": {
+    "S": "autofilldev+subcon1@gmail.com"
+  },
+  "organization": {
+    "M": {
+      "id": {
+        "S": "7a1d2513-cb19-4538-a17f-3a58dda19a84"
+      },
+      "orgType": {
+        "S": "subContractor"
+      }
+    }
+  },
+  "phone": {
+    "S": "12345678"
+  },
+  "profileImage": {
+    "S": "https://xxi0juyzo0.execute-api.ap-southeast-1.amazonaws.com/s3?bucketName=autofill-profiles&fileName=subContractor-0DjGwhXb0TVJk8KrHyAqyyOKmZa2-rtxcard.png"
+  },
+  "role": {
+    "S": "admin"
+  },
+  "username": {
+    "S": "autofilldev+subcon1"
+  }
+}
