@@ -1,0 +1,49 @@
+{
+  "accountType": {
+    "S": "worker"
+  },
+  "id": {
+    "S": "8UMZl1LON2S282bcPpC3qT9OCKB2"
+  },
+  "displayName": {
+    "S": "wwl625"
+  },
+  "email": {
+    "S": "wwl625@gmail.com"
+  },
+  "invitationCode": {
+    "S": ""
+  },
+  "isInDirectory": {
+    "BOOL": false
+  },
+  "profileImage": {
+    "S": ""
+  },
+  "projects": {
+    "L": [
+      {
+        "M": {
+          "id": {
+            "S": "3e830770-99e1-45ad-8422-dc24fe09a3db"
+          },
+          "orgName": {
+            "S": "ABCMainCon"
+          }
+        }
+      }
+    ]
+  },
+  "role": {
+    "S": "user"
+  },
+  "subContractors": {
+    "L": []
+  },
+  "username": {
+    "S": "wwl625"
+  },
+  "workerProfile": {
+    "M": {}
+  }
+}

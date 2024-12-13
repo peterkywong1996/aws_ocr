@@ -1,0 +1,57 @@
+{
+  "accountType": {
+    "S": "worker"
+  },
+  "id": {
+    "S": "rYeFQIB7t5OwqGV5wqZlX9sTsBr1"
+  },
+  "displayName": {
+    "S": "Helen Kwok"
+  },
+  "email": {
+    "S": "helenkwok2011@gmail.com"
+  },
+  "invitationCode": {
+    "S": ""
+  },
+  "isInDirectory": {
+    "BOOL": false
+  },
+  "profileImage": {
+    "S": ""
+  },
+  "projects": {
+    "L": [
+      {
+        "M": {
+          "id": {
+            "S": "3e830770-99e1-45ad-8422-dc24fe09a3db"
+          },
+          "orgName": {
+            "S": "ABCMainCon"
+          }
+        }
+      }
+    ]
+  },
+  "role": {
+    "S": "user"
+  },
+  "subContractors": {
+    "L": []
+  },
+  "username": {
+    "S": "helenkwok2011"
+  },
+  "workerProfile": {
+    "M": {
+      "cardImages": {
+        "L": [
+          {
+            "S": "https://xxi0juyzo0.execute-api.ap-southeast-1.amazonaws.com/s3?bucketName=autofill-worker-card-images&fileName=test0005.png"
+          }
+        ]
+      }
+    }
+  }
+}
