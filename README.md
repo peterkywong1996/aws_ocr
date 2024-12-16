@@ -9,7 +9,7 @@
   6) Expected output a JSON structure (refer to sample text files)
   7) Link to the database for automatic record updating
 
-**- How to run the code (both required an AWS account)**:
+**How to run the code (both required an AWS account)**:
 - Option A. Configuration on AWS cloud:
      1) Upload the .py code to AWS Lambda as a new function
      2) Define your own S3 & DynamoDB objects
