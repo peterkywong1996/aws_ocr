@@ -6,7 +6,8 @@ Amazon Textract for OCR on ID Cards
   3) Triggered scan_worker_card() to retrieve the uploaded images
   4) Compare with existing data in S3 database to decide INSERT new data or MODIFY existing data
   5) Triggered textract_extract_queries() to obtain OCR results, with post-processing
-  6) Link to the database for automatic record updating
+  6) Expected output a JSON structure (refer to sample text files)
+  7) Link to the database for automatic record updating
 
 - How to run the code (both required an AWS account):
 - Option A. Configuration on AWS cloud:
