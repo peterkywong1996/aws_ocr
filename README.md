@@ -9,12 +9,13 @@ Amazon Textract for OCR on ID Cards
   6) Link to the database for automatic record updating
 
 - How to run the code (both required an AWS account):
-- A. Configuration on AWS cloud:
+- Option A. Configuration on AWS cloud:
      1) Upload the .py code to AWS Lambda as a new function
      2) Define your own S3 & DynamoDB objects
      3) Configure trigger(s) to link up the Lambda function with S3 & DynamoDB
      4) Customize the variable names according to your own data schema
-  B. Configuration on local computer (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation):
+  
+- Option B. Configuration on local computer (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation):
      1) Install python packages on local computer
      2) Input your own AWS authentication creditials
      3) Similar to the cloud-based steps
