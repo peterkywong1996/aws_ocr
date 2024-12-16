@@ -1,5 +1,5 @@
 # aws_ocr
-Amazon Textract for OCR on ID Cards
+**Amazon Textract for OCR on ID Cards**
 - Code logic:
 - 1) User uploaded images to S3 database
   2) Automatically triggered lambda_handler()
@@ -9,7 +9,7 @@ Amazon Textract for OCR on ID Cards
   6) Expected output a JSON structure (refer to sample text files)
   7) Link to the database for automatic record updating
 
-- How to run the code (both required an AWS account):
+**- How to run the code (both required an AWS account)**:
 - Option A. Configuration on AWS cloud:
      1) Upload the .py code to AWS Lambda as a new function
      2) Define your own S3 & DynamoDB objects
@@ -21,6 +21,6 @@ Amazon Textract for OCR on ID Cards
      2) Input your own AWS authentication creditials
      3) Similar to the cloud-based steps
 
-- Codes that may involve customization:
-- - get_qa_map(): QueriesConfig -> a list of queries/prompts to govern what information to search from an image; currently extracted = worker name, card reference number, validity period, certificate type
-- - scan_worker_card(): update_item -> the list of updates should be modified according to those queried above
+**Codes that may involve customization**:
+- get_qa_map(): QueriesConfig -> a list of queries/prompts to govern what information to search from an image; currently extracted = worker name, card reference number, validity period, certificate type
+- scan_worker_card(): update_item -> the list of updates should be modified according to those queried above
