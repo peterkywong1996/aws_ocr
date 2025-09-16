@@ -22,5 +22,5 @@
      3) Similar to the cloud-based steps
 
 **Codes that may involve customization**:
-- get_qa_map(): QueriesConfig -> a list of queries/prompts to govern what information to search from an image; currently extracted = worker name, card reference number, validity period, certificate type
+- get_qa_map(): QueriesConfig -> a list of queries/prompts to govern what information to search from an image; currently extracted = worker English name, worker Chinese name (may not be supported by AWS), card reference number, validity period, certificate type
 - scan_worker_card(): update_item -> the list of updates should be modified according to those queried above
