@@ -60,6 +60,7 @@ def get_qa_map(object):
         Document={'Bytes': object}, FeatureTypes=['QUERIES'],
         QueriesConfig={'Queries':[
             {'Text': 'English name of the holder?', 'Alias': 'Name'},
+            {'Text': 'Chinese name of the holder?', 'Alias': 'Name_Chi'}, # As of 16 Sep 2025, AWS Textract may NOT support Chinese words
             {'Text': 'Reference no. of registration card?', 'Alias': 'No.'},
             {'Text': 'Validity period from?', 'Alias': 'DateFrom'},
             {'Text': 'Validity period to?', 'Alias': 'DateTo'},
@@ -140,6 +141,7 @@ def scan_worker_card(event):
             return None
         
         displayName_old = event['Records'][0]['dynamodb']['OldImage']['displayName']['S']
+        chineseName_old = event['Records'][0]['dynamodb']['OldImage']['chineseName']['S'] # As of 16 Sep 2025, AWS Textract may NOT support Chinese words
         refNo_old = event['Records'][0]['dynamodb']['OldImage']['workerProfile']['M']['refNo']['S']
         certificates_old = event['Records'][0]['dynamodb']['OldImage']['workerProfile']['M']['certificates']
     
@@ -154,6 +156,7 @@ def scan_worker_card(event):
 
     #---store each OCR result for post-processing---
     displayName = response_textract['Name'][0]
+    chineseName = response_textract['Name_Chi'][0] # As of 16 Sep 2025, AWS Textract may NOT support Chinese words
     refNo = response_textract['No.'][0]
     validityFrom = response_textract['DateFrom'][0]
     validityTo = response_textract['DateTo'][0]
@@ -190,11 +193,13 @@ def scan_worker_card(event):
     
     #---require manual modification if more information are queried---
     #---currently extracted info: reference no., validity periods, certificate types---
+    # As of 16 Sep 2025, AWS Textract may NOT support Chinese words
     try:
         response = table.update_item(
             Key={'accountType': 'worker', 'id': id},
             UpdateExpression=' \
                 set displayName=:n, \
+                chineseName=:z, \
                 workerProfile.refNo=:r, \
                 workerProfile.validityFrom=:f, \
                 workerProfile.validityTo=:t, \
@@ -202,6 +207,7 @@ def scan_worker_card(event):
                 workerProfile.certificates=:c',
             ExpressionAttributeValues={
                 ':n': displayName,
+                ':z': chineseName,
                 ':r': refNo,
                 ':f': validityFrom,
                 ':t': validityTo,
